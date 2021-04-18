@@ -145,8 +145,8 @@ import numpy as np
 np.random.seed(42) # Define random seed for the reproducability
 
 ####---Input-Data---###
-TRAIN_CSV="/image_data/Scripts/NLP_Classification_CNN/Lung_Classification/Lung_Train_csv_Aug26_2020_patient52460.csv" # Training data-sampled are in folder
-VAL_CSV="/image_data/Scripts/NLP_Classification_CNN/Lung_Classification/Lung_Val_csv_Aug26_2020_patient11242.csv" #validation data in folder
+TRAIN_CSV="/image_data/Scripts/NLP_Classification_CNN/Lung_Classification/Lung_Train_csv.csv" # Training data-sampled are in folder
+VAL_CSV="/image_data/Scripts/NLP_Classification_CNN/Lung_Classification/Lung_Val_csv.csv" #validation data in folder
 #-----using which sections you want to train the model define the column name
 #choice['text_finding_impression_list','text_impression_only' ,'text_Finding_only']
 REPORT_TEXT_COLUMN_NAME='text_Finding_only'
@@ -216,11 +216,9 @@ TRAIN_CLASSIFY_METRICS=tf.keras.metrics.AUC()
 
 
 ####---Input-Data---###---Lungs
-#TRAIN_CSV="/image_data/Scripts/NLP_Classification_CNN/Lung_Classification/Lung_Train_csv_Aug26_2020_patient52460.csv"
-#TEST_CSV="/image_data/Scripts/NLP_Classification_CNN/Lung_Classification/Lung_Val_csv_Aug26_2020_patient11242.csv"
-#TEST_CSV="/image_data/Scripts/NLP_Classification_CNN/Lung_Classification/Lung_Test_csv_Aug26_2020_patient11242.csv"
-TEST_CSV="/image_data/Scripts/NLP_Classification_CNN/Aug_26_Lung_Manual_Test_set_patient.csv"
-#TEST_CSV="/image_data/Scripts/NLP_Classification_CNN/Aug_26_Lung_Manual_Test_set_patient_f&im.csv"
+
+TEST_CSV="/image_data/Scripts/NLP_Classification_CNN/Lung_Manual_Test_set_patient.csv"
+
 
 REPORT_TEXT_COLUMN_NAME='text_Finding_only'
 #['text_finding_impression_list','text_impression_only' ,'text_Finding_only']
@@ -230,34 +228,10 @@ LABELS_COLUMB_BINARY_LABEL_NAME=['lung_normal_lbl']
 
 
 #-----Multi-label
-#TOKENIZER_PICKLE="/image_data/Scripts/NLP_Classification_CNN/Lung_Classification/Multi_Label/tokenizer.pickle"
-#MODEL_WIGHT='/image_data/Scripts/NLP_Classification_CNN/Lung_Classification/Multi_Label/Model_Multi_Label/nlp_Lung_Multi_label70.28_16.h5'
-#SAVING_CSV="nlp_Lung_Multi_label_Epoch_16_Val.csv"
-#SAVING_CSV="nlp_Lung_Multi_label_Epoch_16_Test.csv"
-#SAVING_CSV="nlp_Lung_Multi_label_Epoch_16_Test_ManualTest.csv"
-
 TOKENIZER_PICKLE="/image_data/Scripts/NLP_Classification_CNN/Lung_Classification/Multi_Label_Pretrained/tokenizer.pickle"
-MODEL_WIGHT='/image_data/Scripts/NLP_Classification_CNN/Lung_Classification/Multi_Label_Pretrained/Model_Multi_Label_Pretrained/nlp_Lung_Multi_Label_Pretrained53.66_20.h5'
-#SAVING_CSV="nlp_Lung_Multi_Label_Pretrained_Epoch_20_Val.csv"
-#SAVING_CSV="nlp_Lung_Multi_Label_Pretrained_Epoch_20_Test.csv"
-#SAVING_CSV="nlp_Lung_Multi_Label_Pretrained_Epoch_20_Test_ManualTest.csv"
-#SAVING_CSV="nlp_Lung_Multi_Label_Pretrained_Epoch_20_Test_ManualTest_impression.csv"
-#SAVING_CSV="nlp_Lung_Multi_Label_Pretrained_Epoch_20_Test_ManualTest_f&im.csv"
-SAVING_CSV="nlp_Lung_Multi_Label_Pretrained_Epoch_20_Test_ManualTest_html.csv"
-SAVING_HTML_FILE='/image_data/Scripts/NLP_Classification_CNN/MultiLabel_Deploy/MultiLabel_Pretrained_ManualTestset_HTML/'
-
-
-'''
-#TOKENIZER_PICKLE="/image_data/Scripts/NLP_Classification_CNN/Lung_Classification/Binary_Label_Pretrained/tokenizer.pickle"
-#MODEL_WIGHT='/image_data/Scripts/NLP_Classification_CNN/Lung_Classification/Binary_Label_Pretrained/Model_Binary_Label_Pretrained/nlp_Lung_Binary_Label_Pretrained0.01_17.h5'
-#SAVING_CSV="nlp_Lung_Binary_Label_Pretrained_Epoch_17_Test.csv"
-#SAVING_CSV="nlp_Lung_Binary_Label_Pretrained_Epoch_17_Test_ManualTest.csv"
-
-#TOKENIZER_PICKLE="/image_data/Scripts/NLP_Classification_CNN/Lung_Classification/Binary_Label/tokenizer.pickle"
-#MODEL_WIGHT='/image_data/Scripts/NLP_Classification_CNN/Lung_Classification/Binary_Label/Model_Binary_Label/nlp_Lung_Binary_label0.03_20.h5'
-#SAVING_CSV="nlp_Lung_Binary_Label_Epoch_20_Test.csv"
-#SAVING_CSV="nlp_Lung_Binary_Label_Epoch_20_Test_ManualTest.csv"
-'''
+MODEL_WIGHT='nlp_Lung_Multi_Label_Pretrained_weight.h5'
+SAVING_CSV="nlp_Lung_Multi_Label_Pretrained_Test_ManualTest_html.csv"
+SAVING_HTML_FILE='/path/to/save/html/MultiLabel_Pretrained_ManualTestset_HTML/'
 
 ```
 # Result Analysis
