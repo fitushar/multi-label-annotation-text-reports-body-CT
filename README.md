@@ -18,14 +18,23 @@ D'Anniballe, V.M., Tushar, F.I., Faryna, K., Han, S., Mazurowski, M.A., Rubin, G
 Multi-Label Annotation of Chest Abdomen Pelvis Computed Tomography Text Reports Using Deep Learning, p. arXiv:2102.02959.
 ```
 ### Abstract
-To develop a high throughput multi-label annotator for body Computed Tomography (CT) reports that can be applied to a variety of diseases, organs, and cases. First, we used a dictionary approach to develop a rule-based algorithm (RBA) for extraction of disease labels from radiology text reports. We targeted three organ systems (lungs/pleura, liver/gallbladder, kidneys/ureters) with four diseases per system based on their prevalence in our dataset. To expand the algorithm beyond pre-defined keywords, an attention-guided recurrent neural network (RNN) was trained using the RBA-extracted labels to classify the reports as being positive for one or more diseases or normal for each organ system. Confounding effects on model performance were evaluated using random or pre-trained embedding as well as different sizes of training datasets. Performance was evaluated using the receiver operating characteristic (ROC) area under the curve (AUC) against **2,158** manually obtained labels. Our model extracted disease labels from **261,229** radiology reports of **112,50** unique subjects. Pre-trained models outperformed random embedding across all diseases. As the training dataset size was reduced, performance was robust except for a few diseases with relatively small number of cases. Pre-trained Classification AUCs achieved **> 0.95** for all five disease outcomes across all three organ systems. Our label-extracting pipeline was able to encompass a variety of cases and diseases by generalizing beyond strict rules with exceptional accuracy. As a framework, this model can be easily adapted to enable automated labeling of hospital-scale medical data sets for training image-based disease classifiers.
+
+**Purpose:** To develop high throughput multi-label annotatorsfor body (chest, abdomen, and pelvis) Computed Tomography (CT) reports that can be applied across a variety of abnormalities, organs, and disease states.
+
+**Approach:** We used a dictionary approach to develop rule-based algorithms (RBA) for extraction of disease labels from radiology text reports. We targeted three organ systems (lungs/pleura, liver/gallbladder, kidneys/ureters) with four diseases per system based on their prevalence in our dataset. To expand the algorithms beyond pre-defined keywords attention-guided recurrent neural networks (RNN) were trained using the RBA-extracted labels to classify reports as being positive for one or more diseases or normal for each organ system. Confounding effects on model performance were evaluated using random initialization or pre-trained embedding as well as different sizes of training datasets. Performance was evaluated using the receiver operating characteristic (ROC) area under the curve (AUC) against **2,158** manually obtained labels.
+
+**Results:** Our models extracted disease labels from **261,229** radiology reports of **112,501** unique subjects. Pre-trained models outperformed random initialization across all diseases. As the training dataset size was reduced, performance was robust except for a few diseases with relatively small number of cases. Pre-trained classification AUCs achieved **> 0.95** for all five disease outcomes across all three organ systems.
+
+**Conclusions:** Our label-extracting pipeline was able to encompass a variety of cases and diseases by generalizing beyond strict rules with exceptional accuracy. This method can be easily adapted to enable automated labeling of hospital-scale medical data sets for training image-based disease classifiers. 
+
+
 
 
 # Study Overview
 
-This Study Containes main two parts:
+This Study Contains main two parts:
 
-* 1. Developed and Using RBA to  generate labels from radiology reports
+* 1. Developed and Used RBA to  generate labels from radiology reports.
 * 2. Using generated label data reained Deep learning model to classify radiology text.
 <img src="ReadMefigures/Overall_Workflow.png"  width="80%" height="80%">
 
