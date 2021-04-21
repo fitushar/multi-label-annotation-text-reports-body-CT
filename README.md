@@ -1,6 +1,6 @@
 # Multi-Label Annotation of Text Reports from Computed Tomography of the Chest Abdomen and Pelvis Using RBA and Deep Learning
 
-This Repo contains the updated implementation of our paper "**Multi-Label Annotation of Text Reports from Computed Tomography of the Chest Abdomen and Pelvis Using Deep Learning**" (Will be Submitted to JMI) a pre-print is available: **"Multi-Label Annotation of Chest Abdomen Pelvis Computed Tomography Text Reports Using Deep Learning"** : https://arxiv.org/abs/2102.02959
+This Repo contains the updated implementation of our paper "**Multi-Label Annotation of Text Reports from Computed Tomography of the Chest Abdomen and Pelvis Using Deep Learning**" (Will be Submitted to BMC Medical Informatics and Decision Making) a pre-print is available: **"Multi-Label Annotation of Chest Abdomen Pelvis Computed Tomography Text Reports Using Deep Learning"** : https://arxiv.org/abs/2102.02959
 
 ### Citation
 ```ruby
